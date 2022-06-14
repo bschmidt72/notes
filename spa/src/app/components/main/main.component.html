@@ -1,0 +1,27 @@
+<div class="container">
+  <button mat-mini-fab (click)="add()"><mat-icon>add</mat-icon></button>
+  <div class="notes">
+    <div *ngFor="let note of notes">
+      <div *ngIf="note.uuid !== selectedNote?.uuid" class="note">
+        <mat-card>
+          <mat-card-header>
+            <div class="header">
+              <h3 class="title">{{note.title}}</h3>
+              <h5>{{note.created | date}}</h5>
+              <button mat-mini-fab (click)="select(note)"><mat-icon>edit</mat-icon></button>
+              <button mat-mini-fab (click)="delete(note)"><mat-icon>delete</mat-icon></button>
+            </div>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="card">
+              <p>{{note.description}}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div *ngIf="note.uuid === selectedNote?.uuid" class="edit-row">
+        <app-note-edit *ngIf="selectedNote" [(value)]="selectedNote" (valueChange)="save()" (onCancel)="cancelEdit()"></app-note-edit>
+      </div>
+    </div>
+  </div>
+</div>

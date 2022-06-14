@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  border: 1px solid lightgray;
+}
+.container > * {
+  margin: 8px;
+}
+.fields > * {
+  margin: 4px;
+}
+.title {
+  min-width: 100% !important;
+}
+.description {
+  min-width: 100%;
+}
+.button {
+  min-width: 180px;
+  height: 40px;
+  padding-right: 4px;
+}
+.button-row {
+  display: flex;
+  flex-direction: row;
+}

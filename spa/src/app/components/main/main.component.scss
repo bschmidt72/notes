@@ -1,0 +1,31 @@
+.edit-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.notes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 120px;
+  max-width: 100%;
+}
+.notes > * {
+  margin: 8px;
+}
+.header {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.title {
+  max-width: 100px;
+  word-break: break-all;
+}
+.card {
+  max-width: 280px;
+  word-break: break-all;
+}
