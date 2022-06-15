@@ -50,12 +50,12 @@ namespace webapi.Services
         }
 
         /// <summary>
-        /// Gets the notes from the store
+        /// Gets the notes from the store sorted by creation date desc
         /// </summary>
         /// <returns></returns>
         public List<Note> GetNotes()
         {
-            return _store.ToList();
+            return _store.OrderByDescending(n => n.Created).ToList();
         }
 
         /// <summary>
@@ -89,6 +89,15 @@ namespace webapi.Services
             WriteAll();
         }
 
+        /// <summary>
+        /// Deletes all notes from the store
+        /// </summary>
+        public void DeleteAll()
+        {
+            ResetStore(new List<Note>());
+            WriteAll();
+        }
+        
         private void ResetStore(IEnumerable<Note> notes)
         {
             _store.Clear();

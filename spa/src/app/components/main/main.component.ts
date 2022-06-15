@@ -29,7 +29,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
   add() {
     this.selectedNote = { uuid: UUID.UUID() } as Note;
-    this.notes.push(this.selectedNote);
+    this.notes.unshift(this.selectedNote);
   }
 
   select(note: Note) {

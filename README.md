@@ -28,5 +28,6 @@ On Windows please run startup.cmd, which will launch backend and frontend simult
 Because of time constraints the following parts had to be omitted:
 * Frontend Tests
 * Swagger CLI Generated Frontend Client
+* Using SqlLite for persistence instead of json store
 * Sort & Filter Feature
 * DockerFile to build runnable Docker Image for front- and backend

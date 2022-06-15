@@ -4,12 +4,14 @@
     <div *ngFor="let note of notes">
       <div *ngIf="note.uuid !== selectedNote?.uuid" class="note">
         <mat-card>
+          <h5 class="date">{{note.created | date}}</h5>
           <mat-card-header>
             <div class="header">
               <h3 class="title">{{note.title}}</h3>
-              <h5>{{note.created | date}}</h5>
-              <button mat-mini-fab (click)="select(note)"><mat-icon>edit</mat-icon></button>
-              <button mat-mini-fab (click)="delete(note)"><mat-icon>delete</mat-icon></button>
+              <div class="buttons">
+                <button mat-mini-fab (click)="select(note)"><mat-icon>edit</mat-icon></button>
+                <button mat-mini-fab (click)="delete(note)"><mat-icon>delete</mat-icon></button>
+              </div>
             </div>
           </mat-card-header>
           <mat-card-content>
