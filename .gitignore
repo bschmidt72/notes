@@ -180,9 +180,6 @@ ClientBin/
 *.publishsettings
 orleans.codegen.cs
 
-**/spa/node_modules
-**/spa/dist
-
 # RIA/Silverlight projects
 Generated_Code/
 
@@ -232,8 +229,8 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 yarn.lock
-.idea/
-spa/node_modules/
-spa/.angular/
-spa/dist
+**/.idea/
+**/spa/node_modules/
+**/spa/.angular/
+**/spa/dist/
 
